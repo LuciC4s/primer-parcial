@@ -1,37 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
-const welcomeButton = document.getElementsByClassName("welcomeClass")[0];
-    const changeBackgroundButton = document.getElementById("changeBackgroundButton");
+  const welcomeButton = document.getElementById("welcomeButton"); // <— id correcto
+  const changeBackgroundButton = document.getElementById("changeBackgroundButton");
 
-welcomeButton.addEventListener("click", () => {
-        alert("¡Bienvenido al perfil de usuario!");
-    });
+  welcomeButton.addEventListener("click", () => {
+    alert("¡Bienvenido al perfil de usuario!");
+  });
 
-// Guardar y cargar el estado del color de fondo
-    const savedBackgroundColor = localStorage.getItem("backgroundColor");
-    if (savedBackgroundColor) {
-        document.body.style.backgroundColor = savedBackgroundColor;
-    }
+  // Mantener color guardado
+  const savedBackgroundColor = localStorage.getItem("backgroundColor");
+  if (savedBackgroundColor) {
+    document.body.style.backgroundColor = savedBackgroundColor;
+  }
 
-    changeBackgroundButton.addEventListener("click", () => {
-        //const newColor = document.body.style.backgroundColor === "rgb(224, 224, 224)" ? "#C0CCD9" : "#2B5A8B";
-		var newColor = "rgb(224, 224, 224)";
-		console.log(document.body.style.backgroundColor);
-		if(document.body.style.backgroundColor == "rgb(224, 224, 224)") {
-			newColor = "#4498f2";
-		}else{
-			newColor = "rgb(224, 224, 224)"
-		}
-		console.log(newColor);
-        document.body.style.backgroundColor = newColor;
-        localStorage.setItem("backgroundColor", newColor);
-    });
+  changeBackgroundButton.addEventListener("click", () => {
+    const current = getComputedStyle(document.body).backgroundColor;
+    const next = current === "rgb(224, 224, 224)" ? "#c7f8c2ff" : "rgb(224, 224, 224)";
+    document.body.style.backgroundColor = next;
+    localStorage.setItem("backgroundColor", next);
+  });
 
-    const Image = document.getElementById("foto");
-    Image.addEventListener("mouseover", () => {
-        Image.style.transform = "scale(1.2)";
-    });
+  const profileImage = document.getElementById("foto");
+  profileImage.style.transition = "transform .2s ease";
+  profileImage.addEventListener("mouseover", () => {
+    profileImage.style.transform = "scale(1.2)";
+  });
+  profileImage.addEventListener("mouseout", () => {
+    profileImage.style.transform = "scale(1)";
+  });
 
-    Image.addEventListener("mouseout", () => {
-        Image.style.transform = "scale(1)";
-    });
+  
 });
