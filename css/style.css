@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header #foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-light);
+  transition: box-shadow .3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+header #foto:hover {
+  box-shadow: var(--shadow-heavy);
+}

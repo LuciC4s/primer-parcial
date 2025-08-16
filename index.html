@@ -18,23 +18,43 @@
     </header>
 
     <main class="container my-4">
-        <button class="btn btn-outline-success">
-            <p>Bienvenido!!</p>
-        </button>
-        <button class="btn btn-outline-success">
-            <p>Tema/Fondo</p>
-        </button>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <button class="btn btn-outline-success">
+                <p>Bienvenido!!</p>
+            </button>
+            <button class="btn btn-outline-success">
+                <p>Tema/Fondo</p>
+            </button>
+        </div>
+        <div class="mb-4">
+            <img src="./img/mujer.jpg" alt="Usuario" class="img-fluid rounded-circle" width="150">
+        </div>
+        <form class="row g-3">
+            <div class="col-md-9">
+                <label for="validationDefaultUsername" class="form-label">Username</label>
+                <div class="input-group">
 
-        <ol class="list-group list-group-numbered">
-            <li class="list-group-item">A list item</li>
-            <li class="list-group-item">A list item</li>
-            <li class="list-group-item">A list item</li>
-        </ol>
+                    <input type="text" class="form-control" id="validationDefaultUsername"
+                        aria-describedby="inputGroupPrepend2" required>
+                </div>
+            </div>
+            <div class="col-9">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+        </form>
+        <div class="mt-4">
+            <ol class="list-group list-group-numbered col-md-9">
+                <li class="list-group-item">A list item</li>
+                <li class="list-group-item">A list item</li>
+                <li class="list-group-item">A list item</li>
+            </ol>
+        </div>
     </main>
 
     <footer class="py-4 text-center border-top">
         <div class="container small text-muted">
-
+            <p>Lucia Del Rosario Pérez Castillo</p>
+            <p>9490-21-12018</p>
         </div>
     </footer>
 
