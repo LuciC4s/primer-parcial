@@ -4,17 +4,17 @@
   padding: 0;
 }
 
-header #foto {
-  width: 150px;
-  height: 150px;
+#foto {
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: var(--shadow-light);
+  box-shadow: #3b3636;
   transition: box-shadow .3s ease;
   display: block;
   margin: 0 auto;
 }
 
-header #foto:hover {
-  box-shadow: var(--shadow-heavy);
+div #foto:hover {
+  box-shadow: #0e0d0d;
 }

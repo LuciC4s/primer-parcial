@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href=".css/style.css">
+    
 </head>
 
 <body>
@@ -19,18 +20,18 @@
 
     <main class="container my-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <button class="btn btn-outline-success">
+            <button class="btn btn-outline-success" id="welcomeButton" name="welcomeName">
                 <p>Bienvenido!!</p>
             </button>
-            <button class="btn btn-outline-success">
+            <button class="btn btn-outline-success" id="changeBackgroundButton">
                 <p>Tema/Fondo</p>
             </button>
         </div>
         <div class="mb-4">
-            <img src="./img/mujer.jpg" alt="Usuario" class="img-fluid rounded-circle" width="150">
+             <img src="img/mujer.jpg" alt="..." id="foto">
         </div>
         <form class="row g-3">
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <label for="validationDefaultUsername" class="form-label">Username</label>
                 <div class="input-group">
 
@@ -38,12 +39,12 @@
                         aria-describedby="inputGroupPrepend2" required>
                 </div>
             </div>
-            <div class="col-9">
-                <button class="btn btn-primary" type="submit">Submit form</button>
+            <div class="col-md-12">
+                <button class="btn btn-success" type="submit">Enviar</button>
             </div>
         </form>
         <div class="mt-4">
-            <ol class="list-group list-group-numbered col-md-9">
+            <ol class="list-group list-group-numbered col-md-12">
                 <li class="list-group-item">A list item</li>
                 <li class="list-group-item">A list item</li>
                 <li class="list-group-item">A list item</li>
@@ -59,7 +60,7 @@
     </footer>
 
     <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src=".js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
